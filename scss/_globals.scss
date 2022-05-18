@@ -1,0 +1,106 @@
+:root {
+  --gray-100: hsl(0, 0%, 100%);
+  --gray-400: hsl(0, 0%, 63%);
+  --gray-700: hsl(0, 0%, 27%);
+  --gray-900: hsl(0, 0%, 0%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 500;
+  // font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--gray-400);
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--gray-900);
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a[class] {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.main-grid {
+  display: grid;
+}
+
+.hero-image {
+  width: 100%;
+  aspect-ratio: 1;
+  background-image: url("../images/mobile-image-hero-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.info-section {
+  position: relative;
+  padding: 1.75rem;
+
+  .controls {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-100%);
+  }
+
+  .control-button {
+    display: inline-grid;
+    place-items: center;
+    background: var(--gray-900);
+    width: 3.5rem;
+    aspect-ratio: 1;
+
+    &:hover {
+      background: var(--gray-700);
+    }
+
+    > img {
+      height: 1.125rem;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.logo {
+  padding: 1rem 0.25rem;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3rem 1fr 3rem;
+  place-items: center;
+
+  .nav {
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      padding: 1px;
+    }
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      text-transform: lowercase;
+      color: var(--gray-900);
+      font-weight: 700;
+      padding: 2.5em 0.25em;
+    }
+
+    @media only screen and (max-width: 48em) {
+      position: absolute;
+      display: none;
+      top: 0;
+      width: 100%;
+      background: var(--gray-100);
+    }
+
+    &.open {
+      display: block;
+    }
+  }
+}
