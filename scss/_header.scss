@@ -5,15 +5,29 @@
 .header {
   position: absolute;
   width: 100%;
+  min-height: 6rem;
   display: grid;
   grid-template-columns: 3rem 1fr 3rem;
   place-items: center;
+  padding-inline: 0.5rem;
+
+  .hamburger,
+  .close {
+    padding: 0.5rem;
+  }
 
   .nav {
+    display: none;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 1rem;
+
     ul {
       list-style: none;
       display: flex;
       justify-content: space-between;
+      gap: 1.25rem;
       padding: 1px;
     }
 
@@ -23,19 +37,19 @@
       text-transform: lowercase;
       color: var(--gray-900);
       font-weight: 700;
-      padding: 2.5em 0.25em;
+      padding: 0.5em 0.25em;
     }
 
+    &.open {
+      display: flex;
+    }
+    
     @media only screen and (max-width: 48em) {
       position: absolute;
       display: none;
       top: 0;
       width: 100%;
       background: var(--gray-100);
-    }
-
-    &.open {
-      display: block;
     }
   }
 }
