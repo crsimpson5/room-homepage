@@ -11,9 +11,18 @@
   place-items: center;
   padding-inline: 0.5rem;
 
+  @media only screen and (min-width: 48em) {
+    grid-template-columns: 5rem 1fr;
+    justify-items: left;
+  }
+
   .hamburger,
   .close {
     padding: 0.5rem;
+
+    @media only screen and (min-width: 48em) {
+      display: none;
+    }
   }
 
   .nav {
@@ -29,6 +38,10 @@
       justify-content: space-between;
       gap: 1.25rem;
       padding: 1px;
+
+      @media only screen and (min-width: 48em) {
+        gap: 1.5rem;
+      }
     }
 
     a {
@@ -38,18 +51,46 @@
       color: var(--gray-900);
       font-weight: 700;
       padding: 0.5em 0.25em;
+
+      @media only screen and (min-width: 48em) {
+        position: relative;
+        color: var(--gray-100);
+        font-weight: 400;
+        font-size: 1.125rem;
+
+        &::after {
+          position: absolute;
+          content: "";
+          height: 2px;
+          width: 2.5ch;
+          background: var(--gray-100); 
+          left: 50%;
+          bottom: 0;
+          transform: translateX(-50%) scaleX(0);
+          transition: transform 200ms ease-out;
+          transform-origin: center;
+        }
+
+        &:hover::after {
+          transform: translateX(-50%) scaleX(1);
+        }
+      }
     }
 
     &.open {
       display: flex;
     }
-    
+
     @media only screen and (max-width: 48em) {
       position: absolute;
       display: none;
       top: 0;
       width: 100%;
       background: var(--gray-100);
+    }
+
+    @media only screen and (min-width: 48em) {
+      display: flex;
     }
   }
 }
