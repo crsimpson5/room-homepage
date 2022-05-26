@@ -141,3 +141,21 @@ img {
     }
   }
 }
+
+.attribution {
+  background: var(--gray-900);
+  color: var(--gray-400);
+  font-size: 0.875rem;
+  text-align: center;
+  padding: 1rem;
+
+  a {
+    color: currentColor;
+    text-underline-offset: 0.25em;
+
+    &:hover {
+      color: var(--gray-100);
+      text-decoration-color: var(--gray-100);
+    }
+  }
+}

@@ -132,6 +132,22 @@ img {
   height: 1.125rem;
 }
 
+.attribution {
+  background: var(--gray-900);
+  color: var(--gray-400);
+  font-size: 0.875rem;
+  text-align: center;
+  padding: 1rem;
+}
+.attribution a {
+  color: currentColor;
+  text-underline-offset: 0.25em;
+}
+.attribution a:hover {
+  color: var(--gray-100);
+  text-decoration-color: var(--gray-100);
+}
+
 .logo {
   padding: 1rem 0.25rem;
 }
