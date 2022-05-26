@@ -40,7 +40,14 @@ h3 {
 }
 
 h2 {
-  font-size: 2.25rem;
+  font-size: 2.375rem;
+  line-height: 1;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 4px;
 }
 
 button {
@@ -54,8 +61,13 @@ img {
   max-width: 100%;
 }
 
-a[class] {
+:where(a[class]) {
   text-decoration: none;
+  color: currentColor;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1rem);
 }
 
 .hidden {
@@ -64,6 +76,10 @@ a[class] {
 
 .main-grid {
   display: grid;
+}
+
+.mt-2 {
+  margin-top: 2.5rem;
 }
 
 .hero-image {
@@ -75,9 +91,25 @@ a[class] {
   background-position: center;
 }
 
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.25rem;
+  text-transform: uppercase;
+  color: var(--gray-900);
+  font-weight: bold;
+  letter-spacing: 12px;
+}
+.cta span {
+  padding-top: 0.25em;
+}
+
+.section {
+  padding: 3.5rem 1.75rem;
+}
+
 .info-section {
   position: relative;
-  padding: 1.75rem;
 }
 .info-section .controls {
   display: flex;
