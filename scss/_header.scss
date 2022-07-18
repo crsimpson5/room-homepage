@@ -63,7 +63,7 @@
           content: "";
           height: 2px;
           width: 2.5ch;
-          background: var(--gray-100); 
+          background: var(--gray-100);
           left: 50%;
           bottom: 0;
           transform: translateX(-50%) scaleX(0);
@@ -92,5 +92,19 @@
     @media only screen and (min-width: 48em) {
       display: flex;
     }
+  }
+}
+
+.hero-image {
+  width: 100%;
+  aspect-ratio: 1;
+  background-image: url("../images/mobile-image-hero-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media only screen and (min-width: 24em) {
+    background-image: url("../images/desktop-image-hero-1.jpg");
+    max-height: 60vh;
   }
 }
